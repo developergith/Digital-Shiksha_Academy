@@ -348,13 +348,22 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div>
-              <img
-                src="/placeholder.svg?height=400&width=500"
-                alt="TechAcademy Building"
-                className="rounded-lg shadow-xl"
-              />
-            </div>
+           <div className="relative w-full overflow-x-auto flex gap-4 p-2 scrollbar-hide">
+  {[
+    "/placeholder.svg?height=400&width=500",
+    "/placeholder.svg?height=400&width=501",
+    "/placeholder.svg?height=400&width=502",
+    "/placeholder.svg?height=400&width=503",
+  ].map((img, i) => (
+    <img
+      key={i}
+      src={img}
+      alt={`Slide ${i + 1}`}
+      className="w-[500px] h-[400px] object-cover rounded-lg shadow-xl flex-shrink-0"
+    />
+  ))}
+</div>
+
           </div>
         </div>
       </section>
